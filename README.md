@@ -7,3 +7,14 @@ This repository "only" hosts a website that supports the institute's displays.
 The main goal is provide summaries of daily papers authored or co-authored by MPIA members. Only for those, the summary contains the title, authors, abstract and figures (with captions).
 
 This evolution heavily relies on [arXiv on deck 2](https://mfouesneau.github.io/arxiv_on_deck_2), a package that searches for new articles on [ArXiv](https://arxiv.org/) and renders their summary as Markdown documents. It does not compile the original LaTeX documents and only extracts the relevant information into Markdown files.
+
+
+## UNDER CONSTRUCTION
+todolist
+
+* script to generate the daily summary.
+* update script to order papers by identifier (instead of date which is changed by git).
+* add link to log files in the documentation.
+* see if github actions can report information about the build.
+* see the cron update of the workflow.
+* polish CSS etc.
