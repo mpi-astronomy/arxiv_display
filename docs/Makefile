@@ -2,7 +2,7 @@
 
 BUILDDIR   = _build
 BUILDOPTS  =
-BUILDCMD   = python -c "print('Hello World!')"
+BUILDCMD   = papermill MPIA\ daily\ digest.ipynb log.ipynb
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
