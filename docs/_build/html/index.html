@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- highlight.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/default.min.css">
+    <!-- Mathjax 3 -->
+    <!-- Latex extension list http://docs.mathjax.org/en/latest/input/tex/extensions/index.html -->
+    <script>
+        MathJax = {
+          loader: {
+            load: ['ui/menu', '[tex]/all-packages', '[tex]/physics',
+                   '[tex]/ams', '[tex]/gensymb', '[tex]/noundefined',
+                   '[tex]/noerrors']
+          },
+          tex: {
+            packages: {'[+]': ['physics', 'ams', 'gensymb', 'noundefined']},
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            processEscapes: false,
+            noundefined: {
+                color: 'red',
+                background: '',
+                size: ''
+            }
+          },
+        };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+
+    <style>
+
+        body {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.116);
+            margin: 0 0;
+            font-family: system-ui;
+        }
+
+        * {
+            box-sizing: border-box;
+            scrollbar-color: transparent transparent;
+            /* thumb and track color */
+            scrollbar-width: 0px;
+        }
+
+        *::-webkit-scrollbar {
+            width: 0;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background: transparent;
+            border: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+        }
+
+        .md_view {
+            width: 33%;
+            display: inline-block;
+            background-color: #fff;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        #header {
+            max-width: 100%;
+        }
+
+        #content {
+            font-size: 1rem;
+            width: 100%;
+            margin: auto;
+            display: flex;
+            align-items: flex-start;
+            align-content: flex-start;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            background-color: #eee;
+            line-height: 1.3rem;
+        }
+        #content h1 {
+            font-size: 1.5rem;
+        }
+        .macros {
+            visibility: visible;
+            position: absolute;
+            height: 0px;
+        }
+
+        .img img {object-fit:contain; max-height:150px; display:inline-block; text-align: center;}
+
+        .macros {
+            visibility: hidden;
+            position: absolute;
+            height: 0px;
+        }
+
+        #div_fig1 {
+            width:100%;
+            float:left;
+            padding: 5px;
+        }
+        #div_fig2{
+            width:50%;
+            float:left;
+            clear:left;
+            padding: 5px;
+        }
+        #div_fig3 {
+            width:50%;
+            float:left;
+            padding: 5px;
+        }
+
+        #authors {
+            width: 100%;
+        }
+
+        #comments {
+            width: 100%;
+        }
+
+        mark {background-color:#fff3b6;}
+
+        #abstract {
+            width: 100%;
+            padding-top: 1rem;
+        }
+
+    </style>
+    <title>MPIA Arxiv on deck!</title>
+    <link rel="icon" type="image/x-icon" href="https://www.mpia.de/assets/touch-icon-32x32-a66937bcebc4e8894ebff1f41a366c7c7220fd97a38869ee0f2db65a9f59b6c1.png">
+</head>
+
+<body>
+    <div id="header">
+        <img src="header_banner.png" width="100%">
+    </div>
+    <div id="content">
+        <div id="slide1_content" class="md_view" width="30%">Content 1</div>
+        <div id="slide2_content" class="md_view" width="30%">Content 2</div>
+        <div id="slide3_content" class="md_view" width="30%">Content 3</div>
+    </div>
+</body>
+
+
+<!-- Render Markdown -->
+
+<body>
+    <!-- highlight.js: https://highlightjs.org/download/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <!-- marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        const docs = ["2203.16734.md", "2203.15811.md", "2203.16504.md"];
+        const slides = ["slide1_content", "slide2_content", "slide3_content"];
+
+        async function run() {
+            for (let i = 0; i < docs.length; i++) {
+                let file = await fetch(docs[i]);
+                let text = await file.text()
+            document.getElementById(slides[i]).innerHTML =
+                marked.parse(text);
+            }
+            hljs.highlightAll();
+        }
+        run()
+    </script>
+
+</body>
+
+</html>
