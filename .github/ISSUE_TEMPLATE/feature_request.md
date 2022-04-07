@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+_Please have a look at the discussions, your feature may already be in the pipes_
+
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
