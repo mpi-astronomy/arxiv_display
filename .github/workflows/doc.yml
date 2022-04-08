@@ -32,6 +32,23 @@ jobs:
       run: |
         make html
 
+    - name: commit logs
+      working-directory: ./docs
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add log.ipynb
+        git add _build/html/*
+        git commit -m "new run happened" -a || true
+
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
+
+
+
     # Publish built docs to gh-pages branch.
     # ===============================
     - name: Commit documentation changes
