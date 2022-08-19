@@ -59,11 +59,18 @@ jobs:
         git commit -m "Update documentation" -a || true
         # The above command will fail if no changes were present, so we ignore
         # that.
+    - name: Check for modified files
+          id: git-check
+          run: |
+            echo ::set-output name=modified::$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)
     - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        branch: gh-pages
-        directory: gh-pages
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        force: true
+      if: steps.git-check.outputs.modified == 'true'
+      run: |
+        echo "### new files! :rocket:" >> $GITHUB_STEP_SUMMARY
+        echo "$(git status -s)" >> $GITHUB_STEP_SUMMARY
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git commit -am "new files"
+        git push
     # ===============================
