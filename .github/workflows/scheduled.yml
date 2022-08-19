@@ -67,12 +67,13 @@ jobs:
     - name: Push changes
       if: steps.git-check.outputs.modified == 'true'
       run: |
+        echo "### new outputs! :rocket:" >> $GITHUB_STEP_SUMMARY
+        echo "$(git ls-files -mo "*md")" >> $GITHUB_STEP_SUMMARY
         echo "### new files! :rocket:" >> $GITHUB_STEP_SUMMARY
         echo "$(git ls-files -mo)" >> $GITHUB_STEP_SUMMARY
         git config --global user.name 'github-actions'
         git config --global user.email 'github-actions@github.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git add "$(git ls-files -mo)"
         git commit -am "new files"
         git push
     # ===============================
