@@ -60,9 +60,9 @@ jobs:
         # The above command will fail if no changes were present, so we ignore
         # that.
     - name: Check for modified files
-          id: git-check
-          run: |
-            echo ::set-output name=modified::$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)
+      id: git-check
+      run: |
+        echo ::set-output name=modified::$(if git diff-index --quiet HEAD --; then echo "false"; else echo "true"; fi)
     - name: Push changes
       if: steps.git-check.outputs.modified == 'true'
       run: |
