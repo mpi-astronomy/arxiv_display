@@ -1,6 +1,7 @@
 name: daily update
 
 on:
+  workflow_dispatch:
   schedule:
   #https://jasonet.co/posts/scheduled-actions/
   #       ┌───────────── minute (0 - 59)
