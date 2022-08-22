@@ -56,6 +56,10 @@ jobs:
         touch .nojekyll
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        echo "### new gh-pages outputs! :rocket:" >> $GITHUB_STEP_SUMMARY
+        echo "$(git ls-files -mo "*md")" >> $GITHUB_STEP_SUMMARY
+        echo "### new gh-pages files! :rocket:" >> $GITHUB_STEP_SUMMARY
+        echo "$(git ls-files -mo)" >> $GITHUB_STEP_SUMMARY
         git add .
         git commit -m "Update documentation" -a || true
         # The above command will fail if no changes were present, so we ignore
