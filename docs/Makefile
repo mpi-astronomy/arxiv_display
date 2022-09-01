@@ -13,3 +13,6 @@ html:
 	$(BUILDCMD)
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+
+serve:
+	cd $(BUILDDIR)/html && python3 -m http.server
