@@ -30,7 +30,7 @@
   <ol class="carousel__viewport">
     <li id="carousel__slide1" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
-         <a href="#carousel__slide33" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide35" class="carousel__prev">Go to previous slide</a>
          <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
          <div id="slide1_content" class="md_view" >Content 1</div>
        </div>
@@ -255,8 +255,22 @@
     <li id="carousel__slide33" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
          <a href="#carousel__slide32" class="carousel__prev">Go to previous slide</a>
-         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <a href="#carousel__slide34" class="carousel__next">Go to next slide</a>
          <div id="slide33_content" class="md_view" >Content 33</div>
+       </div>
+    </li>
+    <li id="carousel__slide34" tabindex="0" class="carousel__slide">
+       <div class="carousel__snapper">
+         <a href="#carousel__slide33" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide35" class="carousel__next">Go to next slide</a>
+         <div id="slide34_content" class="md_view" >Content 34</div>
+       </div>
+    </li>
+    <li id="carousel__slide35" tabindex="0" class="carousel__slide">
+       <div class="carousel__snapper">
+         <a href="#carousel__slide34" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <div id="slide35_content" class="md_view" >Content 35</div>
        </div>
     </li>
   </ol>
@@ -361,6 +375,12 @@
       <li class="carousel__navigation-item">
         <a href="#carousel__slide33" class="carousel__navigation-button">Go to 33</a>
       </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide34" class="carousel__navigation-button">Go to 34</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide35" class="carousel__navigation-button">Go to 35</a>
+      </li>
     </ol>
   </aside>
 </section>
@@ -374,9 +394,9 @@
   <!-- marked.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-const docs = ["2209.06833.md", "2209.05814.md", "2209.05593.md", "2209.04304.md", "2209.03367.md", "2209.02872.md", "2209.02725.md", "2209.02722.md", "2209.02092.md", "2209.01125.md", "2209.00828.md", "2209.00363.md", "2208.14927.md", "2208.09335.md", "2208.08872.md", "2204.06393.md", "2204.03335.md", "2204.03253.md", "2204.02998.md", "2204.02109.md", "2204.02017.md", "2204.01824.md", "2204.01758.md", "2204.01245.md", "2204.00793.md", "2204.00342.md", "2203.16959.md", "2203.16856.md", "2203.16735.md", "2203.16734.md", "2203.16504.md", "2203.15822.md", "2203.15811.md"]
+const docs = ["2209.07962.md", "2209.07931.md", "2209.06833.md", "2209.05814.md", "2209.05593.md", "2209.04304.md", "2209.03367.md", "2209.02872.md", "2209.02725.md", "2209.02722.md", "2209.02092.md", "2209.01125.md", "2209.00828.md", "2209.00363.md", "2208.14927.md", "2208.09335.md", "2208.08872.md", "2204.06393.md", "2204.03335.md", "2204.03253.md", "2204.02998.md", "2204.02109.md", "2204.02017.md", "2204.01824.md", "2204.01758.md", "2204.01245.md", "2204.00793.md", "2204.00342.md", "2203.16959.md", "2203.16856.md", "2203.16735.md", "2203.16734.md", "2203.16504.md", "2203.15822.md", "2203.15811.md"]
 
-const slides = ["slide1_content", "slide2_content", "slide3_content", "slide4_content", "slide5_content", "slide6_content", "slide7_content", "slide8_content", "slide9_content", "slide10_content", "slide11_content", "slide12_content", "slide13_content", "slide14_content", "slide15_content", "slide16_content", "slide17_content", "slide18_content", "slide19_content", "slide20_content", "slide21_content", "slide22_content", "slide23_content", "slide24_content", "slide25_content", "slide26_content", "slide27_content", "slide28_content", "slide29_content", "slide30_content", "slide31_content", "slide32_content", "slide33_content"]
+const slides = ["slide1_content", "slide2_content", "slide3_content", "slide4_content", "slide5_content", "slide6_content", "slide7_content", "slide8_content", "slide9_content", "slide10_content", "slide11_content", "slide12_content", "slide13_content", "slide14_content", "slide15_content", "slide16_content", "slide17_content", "slide18_content", "slide19_content", "slide20_content", "slide21_content", "slide22_content", "slide23_content", "slide24_content", "slide25_content", "slide26_content", "slide27_content", "slide28_content", "slide29_content", "slide30_content", "slide31_content", "slide32_content", "slide33_content", "slide34_content", "slide35_content"]
 
 async function run() {
     for (let i = 0; i < docs.length; i++) {
