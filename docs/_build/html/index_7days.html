@@ -30,7 +30,7 @@
   <ol class="carousel__viewport">
     <li id="carousel__slide1" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
-         <a href="#carousel__slide40" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide42" class="carousel__prev">Go to previous slide</a>
          <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
          <div id="slide1_content" class="md_view" >Content 1</div>
        </div>
@@ -304,8 +304,22 @@
     <li id="carousel__slide40" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
          <a href="#carousel__slide39" class="carousel__prev">Go to previous slide</a>
-         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <a href="#carousel__slide41" class="carousel__next">Go to next slide</a>
          <div id="slide40_content" class="md_view" >Content 40</div>
+       </div>
+    </li>
+    <li id="carousel__slide41" tabindex="0" class="carousel__slide">
+       <div class="carousel__snapper">
+         <a href="#carousel__slide40" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide42" class="carousel__next">Go to next slide</a>
+         <div id="slide41_content" class="md_view" >Content 41</div>
+       </div>
+    </li>
+    <li id="carousel__slide42" tabindex="0" class="carousel__slide">
+       <div class="carousel__snapper">
+         <a href="#carousel__slide41" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <div id="slide42_content" class="md_view" >Content 42</div>
        </div>
     </li>
   </ol>
@@ -431,6 +445,12 @@
       <li class="carousel__navigation-item">
         <a href="#carousel__slide40" class="carousel__navigation-button">Go to 40</a>
       </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide41" class="carousel__navigation-button">Go to 41</a>
+      </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide42" class="carousel__navigation-button">Go to 42</a>
+      </li>
     </ol>
   </aside>
 </section>
@@ -444,9 +464,9 @@
   <!-- marked.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-const docs = ["2209.09914.md", "2209.09823.md", "2209.08242.md", "2209.08120.md", "2209.08106.md", "2209.07962.md", "2209.07931.md", "2209.06833.md", "2209.05814.md", "2209.05593.md", "2209.04304.md", "2209.03367.md", "2209.02872.md", "2209.02725.md", "2209.02722.md", "2209.02092.md", "2209.01125.md", "2209.00828.md", "2209.00363.md", "2208.14927.md", "2208.09335.md", "2208.08872.md", "2204.06393.md", "2204.03335.md", "2204.03253.md", "2204.02998.md", "2204.02109.md", "2204.02017.md", "2204.01824.md", "2204.01758.md", "2204.01245.md", "2204.00793.md", "2204.00342.md", "2203.16959.md", "2203.16856.md", "2203.16735.md", "2203.16734.md", "2203.16504.md", "2203.15822.md", "2203.15811.md"]
+const docs = ["2209.11096.md", "2209.10618.md", "2209.09914.md", "2209.09823.md", "2209.08242.md", "2209.08120.md", "2209.08106.md", "2209.07962.md", "2209.07931.md", "2209.06833.md", "2209.05814.md", "2209.05593.md", "2209.04304.md", "2209.03367.md", "2209.02872.md", "2209.02725.md", "2209.02722.md", "2209.02092.md", "2209.01125.md", "2209.00828.md", "2209.00363.md", "2208.14927.md", "2208.09335.md", "2208.08872.md", "2204.06393.md", "2204.03335.md", "2204.03253.md", "2204.02998.md", "2204.02109.md", "2204.02017.md", "2204.01824.md", "2204.01758.md", "2204.01245.md", "2204.00793.md", "2204.00342.md", "2203.16959.md", "2203.16856.md", "2203.16735.md", "2203.16734.md", "2203.16504.md", "2203.15822.md", "2203.15811.md"]
 
-const slides = ["slide1_content", "slide2_content", "slide3_content", "slide4_content", "slide5_content", "slide6_content", "slide7_content", "slide8_content", "slide9_content", "slide10_content", "slide11_content", "slide12_content", "slide13_content", "slide14_content", "slide15_content", "slide16_content", "slide17_content", "slide18_content", "slide19_content", "slide20_content", "slide21_content", "slide22_content", "slide23_content", "slide24_content", "slide25_content", "slide26_content", "slide27_content", "slide28_content", "slide29_content", "slide30_content", "slide31_content", "slide32_content", "slide33_content", "slide34_content", "slide35_content", "slide36_content", "slide37_content", "slide38_content", "slide39_content", "slide40_content"]
+const slides = ["slide1_content", "slide2_content", "slide3_content", "slide4_content", "slide5_content", "slide6_content", "slide7_content", "slide8_content", "slide9_content", "slide10_content", "slide11_content", "slide12_content", "slide13_content", "slide14_content", "slide15_content", "slide16_content", "slide17_content", "slide18_content", "slide19_content", "slide20_content", "slide21_content", "slide22_content", "slide23_content", "slide24_content", "slide25_content", "slide26_content", "slide27_content", "slide28_content", "slide29_content", "slide30_content", "slide31_content", "slide32_content", "slide33_content", "slide34_content", "slide35_content", "slide36_content", "slide37_content", "slide38_content", "slide39_content", "slide40_content", "slide41_content", "slide42_content"]
 
 async function run() {
     for (let i = 0; i < docs.length; i++) {
