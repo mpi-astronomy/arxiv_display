@@ -30,7 +30,7 @@
   <ol class="carousel__viewport">
     <li id="carousel__slide1" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
-         <a href="#carousel__slide93" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide94" class="carousel__prev">Go to previous slide</a>
          <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
          <div id="slide1_content" class="md_view" >Content 1</div>
        </div>
@@ -675,8 +675,15 @@
     <li id="carousel__slide93" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
          <a href="#carousel__slide92" class="carousel__prev">Go to previous slide</a>
-         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <a href="#carousel__slide94" class="carousel__next">Go to next slide</a>
          <div id="slide93_content" class="md_view" >Content 93</div>
+       </div>
+    </li>
+    <li id="carousel__slide94" tabindex="0" class="carousel__slide">
+       <div class="carousel__snapper">
+         <a href="#carousel__slide93" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <div id="slide94_content" class="md_view" >Content 94</div>
        </div>
     </li>
   </ol>
@@ -961,6 +968,9 @@
       <li class="carousel__navigation-item">
         <a href="#carousel__slide93" class="carousel__navigation-button">Go to 93</a>
       </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide94" class="carousel__navigation-button">Go to 94</a>
+      </li>
     </ol>
   </aside>
 </section>
@@ -974,9 +984,9 @@
   <!-- marked.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-const docs = ["2211.08493.md", "2211.08487.md", "2211.08294.md", "2211.07667.md", "2211.07659.md", "2211.06454.md", "2211.06205.md", "2211.06194.md", "2211.05022.md", "2211.04048.md", "2211.03641.md", "2211.02502.md", "2211.01474.md", "2211.00667.md", "2211.00657.md", "2211.00087.md", "2211.00036.md", "2211.00020.md", "2211.00010.md", "2210.17434.md", "2210.12412.md", "2210.11926.md", "2210.11551.md", "2210.11103.md", "2210.10707.md", "2210.09930.md", "2210.08996.md", "2210.08517.md", "2210.08510.md", "2210.08078.md", "2210.06504.md", "2210.05695.md", "2210.05595.md", "2210.05505.md", "2210.04721.md", "2210.03615.md", "2210.01811.md", "2210.01809.md", "2210.01556.md", "2210.00863.md", "2210.00560.md", "2209.15403.md", "2209.15110.md", "2209.14410.md", "2209.14396.md", "2209.13717.md", "2209.13336.md", "2209.12906.md", "2209.11781.md", "2209.11602.md", "2209.11248.md", "2209.11096.md", "2209.10618.md", "2209.09914.md", "2209.09823.md", "2209.08242.md", "2209.08120.md", "2209.08106.md", "2209.07962.md", "2209.07931.md", "2209.06833.md", "2209.05814.md", "2209.05593.md", "2209.04304.md", "2209.03367.md", "2209.02872.md", "2209.02725.md", "2209.02722.md", "2209.02092.md", "2209.01125.md", "2209.00828.md", "2209.00363.md", "2208.14927.md", "2208.09335.md", "2208.08872.md", "2204.06393.md", "2204.03335.md", "2204.03253.md", "2204.02998.md", "2204.02109.md", "2204.02017.md", "2204.01824.md", "2204.01758.md", "2204.01245.md", "2204.00793.md", "2204.00342.md", "2203.16959.md", "2203.16856.md", "2203.16735.md", "2203.16734.md", "2203.16504.md", "2203.15822.md", "2203.15811.md"]
+const docs = ["2211.09217.md", "2211.08493.md", "2211.08487.md", "2211.08294.md", "2211.07667.md", "2211.07659.md", "2211.06454.md", "2211.06205.md", "2211.06194.md", "2211.05022.md", "2211.04048.md", "2211.03641.md", "2211.02502.md", "2211.01474.md", "2211.00667.md", "2211.00657.md", "2211.00087.md", "2211.00036.md", "2211.00020.md", "2211.00010.md", "2210.17434.md", "2210.12412.md", "2210.11926.md", "2210.11551.md", "2210.11103.md", "2210.10707.md", "2210.09930.md", "2210.08996.md", "2210.08517.md", "2210.08510.md", "2210.08078.md", "2210.06504.md", "2210.05695.md", "2210.05595.md", "2210.05505.md", "2210.04721.md", "2210.03615.md", "2210.01811.md", "2210.01809.md", "2210.01556.md", "2210.00863.md", "2210.00560.md", "2209.15403.md", "2209.15110.md", "2209.14410.md", "2209.14396.md", "2209.13717.md", "2209.13336.md", "2209.12906.md", "2209.11781.md", "2209.11602.md", "2209.11248.md", "2209.11096.md", "2209.10618.md", "2209.09914.md", "2209.09823.md", "2209.08242.md", "2209.08120.md", "2209.08106.md", "2209.07962.md", "2209.07931.md", "2209.06833.md", "2209.05814.md", "2209.05593.md", "2209.04304.md", "2209.03367.md", "2209.02872.md", "2209.02725.md", "2209.02722.md", "2209.02092.md", "2209.01125.md", "2209.00828.md", "2209.00363.md", "2208.14927.md", "2208.09335.md", "2208.08872.md", "2204.06393.md", "2204.03335.md", "2204.03253.md", "2204.02998.md", "2204.02109.md", "2204.02017.md", "2204.01824.md", "2204.01758.md", "2204.01245.md", "2204.00793.md", "2204.00342.md", "2203.16959.md", "2203.16856.md", "2203.16735.md", "2203.16734.md", "2203.16504.md", "2203.15822.md", "2203.15811.md"]
 
-const slides = ["slide1_content", "slide2_content", "slide3_content", "slide4_content", "slide5_content", "slide6_content", "slide7_content", "slide8_content", "slide9_content", "slide10_content", "slide11_content", "slide12_content", "slide13_content", "slide14_content", "slide15_content", "slide16_content", "slide17_content", "slide18_content", "slide19_content", "slide20_content", "slide21_content", "slide22_content", "slide23_content", "slide24_content", "slide25_content", "slide26_content", "slide27_content", "slide28_content", "slide29_content", "slide30_content", "slide31_content", "slide32_content", "slide33_content", "slide34_content", "slide35_content", "slide36_content", "slide37_content", "slide38_content", "slide39_content", "slide40_content", "slide41_content", "slide42_content", "slide43_content", "slide44_content", "slide45_content", "slide46_content", "slide47_content", "slide48_content", "slide49_content", "slide50_content", "slide51_content", "slide52_content", "slide53_content", "slide54_content", "slide55_content", "slide56_content", "slide57_content", "slide58_content", "slide59_content", "slide60_content", "slide61_content", "slide62_content", "slide63_content", "slide64_content", "slide65_content", "slide66_content", "slide67_content", "slide68_content", "slide69_content", "slide70_content", "slide71_content", "slide72_content", "slide73_content", "slide74_content", "slide75_content", "slide76_content", "slide77_content", "slide78_content", "slide79_content", "slide80_content", "slide81_content", "slide82_content", "slide83_content", "slide84_content", "slide85_content", "slide86_content", "slide87_content", "slide88_content", "slide89_content", "slide90_content", "slide91_content", "slide92_content", "slide93_content"]
+const slides = ["slide1_content", "slide2_content", "slide3_content", "slide4_content", "slide5_content", "slide6_content", "slide7_content", "slide8_content", "slide9_content", "slide10_content", "slide11_content", "slide12_content", "slide13_content", "slide14_content", "slide15_content", "slide16_content", "slide17_content", "slide18_content", "slide19_content", "slide20_content", "slide21_content", "slide22_content", "slide23_content", "slide24_content", "slide25_content", "slide26_content", "slide27_content", "slide28_content", "slide29_content", "slide30_content", "slide31_content", "slide32_content", "slide33_content", "slide34_content", "slide35_content", "slide36_content", "slide37_content", "slide38_content", "slide39_content", "slide40_content", "slide41_content", "slide42_content", "slide43_content", "slide44_content", "slide45_content", "slide46_content", "slide47_content", "slide48_content", "slide49_content", "slide50_content", "slide51_content", "slide52_content", "slide53_content", "slide54_content", "slide55_content", "slide56_content", "slide57_content", "slide58_content", "slide59_content", "slide60_content", "slide61_content", "slide62_content", "slide63_content", "slide64_content", "slide65_content", "slide66_content", "slide67_content", "slide68_content", "slide69_content", "slide70_content", "slide71_content", "slide72_content", "slide73_content", "slide74_content", "slide75_content", "slide76_content", "slide77_content", "slide78_content", "slide79_content", "slide80_content", "slide81_content", "slide82_content", "slide83_content", "slide84_content", "slide85_content", "slide86_content", "slide87_content", "slide88_content", "slide89_content", "slide90_content", "slide91_content", "slide92_content", "slide93_content", "slide94_content"]
 
 async function run() {
     for (let i = 0; i < docs.length; i++) {
