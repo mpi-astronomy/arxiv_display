@@ -30,7 +30,7 @@
   <ol class="carousel__viewport">
     <li id="carousel__slide1" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
-         <a href="#carousel__slide11" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide12" class="carousel__prev">Go to previous slide</a>
          <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
          <div id="slide1_content" class="md_view" >Content 1</div>
        </div>
@@ -101,8 +101,15 @@
     <li id="carousel__slide11" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
          <a href="#carousel__slide10" class="carousel__prev">Go to previous slide</a>
-         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <a href="#carousel__slide12" class="carousel__next">Go to next slide</a>
          <div id="slide11_content" class="md_view" >Content 11</div>
+       </div>
+    </li>
+    <li id="carousel__slide12" tabindex="0" class="carousel__slide">
+       <div class="carousel__snapper">
+         <a href="#carousel__slide11" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <div id="slide12_content" class="md_view" >Content 12</div>
        </div>
     </li>
   </ol>
@@ -141,6 +148,9 @@
       <li class="carousel__navigation-item">
         <a href="#carousel__slide11" class="carousel__navigation-button">Go to 11</a>
       </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide12" class="carousel__navigation-button">Go to 12</a>
+      </li>
     </ol>
   </aside>
 </section>
@@ -154,9 +164,9 @@
   <!-- marked.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-const docs = ["2301.06873.md", "2301.06819.md", "2301.06575.md", "2301.05718.md", "2301.05720.md", "2301.04656.md", "2301.05034.md", "2301.04533.md", "2301.04442.md", "2301.03689.md", "2301.03811.md"]
+const docs = ["2301.07366.md", "2301.07116.md", "2301.07199.md", "2301.06873.md", "2301.06819.md", "2301.06575.md", "2301.05718.md", "2301.05720.md", "2301.04656.md", "2301.05034.md", "2301.04533.md", "2301.04442.md"]
 
-const slides = ["slide1_content", "slide2_content", "slide3_content", "slide4_content", "slide5_content", "slide6_content", "slide7_content", "slide8_content", "slide9_content", "slide10_content", "slide11_content"]
+const slides = ["slide1_content", "slide2_content", "slide3_content", "slide4_content", "slide5_content", "slide6_content", "slide7_content", "slide8_content", "slide9_content", "slide10_content", "slide11_content", "slide12_content"]
 
 async function run() {
     for (let i = 0; i < docs.length; i++) {
