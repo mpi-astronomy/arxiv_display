@@ -12,7 +12,6 @@ This evolution heavily relies on [arXiv on deck 2](https://mfouesneau.github.io/
 ## UNDER CONSTRUCTION
 todolist
 
-* update script to generate the daily summary. (carousel with days=1)
 * add link to log files in the documentation.
 * see if github actions can report information about the build.
 * polish CSS etc.
