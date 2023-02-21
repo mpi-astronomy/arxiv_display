@@ -30,7 +30,7 @@
   <ol class="carousel__viewport">
     <li id="carousel__slide1" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
-         <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide4" class="carousel__prev">Go to previous slide</a>
          <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
          <div id="slide1_content" class="md_view" >Content 1</div>
        </div>
@@ -45,8 +45,15 @@
     <li id="carousel__slide3" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
          <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
-         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
          <div id="slide3_content" class="md_view" >Content 3</div>
+       </div>
+    </li>
+    <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+       <div class="carousel__snapper">
+         <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+         <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
+         <div id="slide4_content" class="md_view" >Content 4</div>
        </div>
     </li>
   </ol>
@@ -61,6 +68,9 @@
       <li class="carousel__navigation-item">
         <a href="#carousel__slide3" class="carousel__navigation-button">Go to 3</a>
       </li>
+      <li class="carousel__navigation-item">
+        <a href="#carousel__slide4" class="carousel__navigation-button">Go to 4</a>
+      </li>
     </ol>
   </aside>
 </section>
@@ -74,9 +84,9 @@
   <!-- marked.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-const docs = ["2302.08736.md", "2302.08962.md", "2302.08628.md"]
+const docs = ["2302.10008.md", "2302.08736.md", "2302.08962.md", "2302.08628.md"]
 
-const slides = ["slide1_content", "slide2_content", "slide3_content"]
+const slides = ["slide1_content", "slide2_content", "slide3_content", "slide4_content"]
 
 async function run() {
     for (let i = 0; i < docs.length; i++) {
