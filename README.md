@@ -12,9 +12,6 @@ This evolution heavily relies on [arXiv on deck 2](https://mfouesneau.github.io/
 ## UNDER CONSTRUCTION
 todolist
 
-* script to generate the daily summary.
-* update script to order papers by identifier (instead of date which is changed by git).
 * add link to log files in the documentation.
 * see if github actions can report information about the build.
-* see the cron update of the workflow.
 * polish CSS etc.
