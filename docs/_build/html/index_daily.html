@@ -30,16 +30,9 @@
   <ol class="carousel__viewport">
     <li id="carousel__slide1" tabindex="0" class="carousel__slide">
        <div class="carousel__snapper">
-         <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
-         <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
-         <div id="slide1_content" class="md_view" >Content 1</div>
-       </div>
-    </li>
-    <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-       <div class="carousel__snapper">
          <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
          <a href="#carousel__slide1" class="carousel__next">Go to next slide</a>
-         <div id="slide2_content" class="md_view" >Content 2</div>
+         <div id="slide1_content" class="md_view" >Content 1</div>
        </div>
     </li>
   </ol>
@@ -47,9 +40,6 @@
     <ol class="carousel__navigation-list">
       <li class="carousel__navigation-item">
         <a href="#carousel__slide1" class="carousel__navigation-button">Go to 1</a>
-      </li>
-      <li class="carousel__navigation-item">
-        <a href="#carousel__slide2" class="carousel__navigation-button">Go to 2</a>
       </li>
     </ol>
   </aside>
@@ -64,9 +54,9 @@
   <!-- marked.js -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script>
-const docs = ["2302.10943.md", "2302.10528.md"]
+const docs = ["2302.10943.md"]
 
-const slides = ["slide1_content", "slide2_content"]
+const slides = ["slide1_content"]
 
 async function run() {
     for (let i = 0; i < docs.length; i++) {
