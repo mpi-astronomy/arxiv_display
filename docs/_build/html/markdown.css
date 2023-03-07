@@ -1,0 +1,82 @@
+.md_view {
+    width: 100%;
+    display: flex;
+    background-color: None;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#header {
+    max-width: 100%;
+}
+
+#content {
+    font-size: 1rem;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: #eee;
+    line-height: 1.3rem;
+}
+#content h1 {
+    width: 100%;
+    font-size: 1.5rem;
+}
+.macros {
+    visibility: hidden;
+    position: absolute;
+    height: 0px;
+}
+
+#div_fig1 {
+    width: 33%;
+}
+#div_fig2{
+    width: 33%;
+}
+#div_fig3 {
+    width: 33%;
+}
+
+#authors {
+    width: 100%;
+}
+
+#comments {
+    width: 100%;
+}
+
+mark {background-color:#fff3b6;}
+
+#abstract {
+    width: 100%;
+    padding-top: 1rem;
+}
+
+#info {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  font-size: medium;
+  font-family: system-ui;
+  margin-left: auto;
+  margin-right: 0;
+  text-align: end;
+  padding-right: 1rem;
+}
+
+#suptitle {
+    position: absolute;
+    top: 1%;
+    left: 28%;
+    font-size: larger;
+    font-family: system-ui;
+}
+
+.img img {object-fit:contain; max-height:150px; display:inline-block; text-align: center;}
