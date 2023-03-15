@@ -26,7 +26,7 @@
 
 <body translate="no" >
     <div id="header"> <img src="header_banner.png" width="100%"></div>
-    <div id="suptitle"> Daily </div>
+    <div id="suptitle"> 7 Days </div>
     <div id="info">
         <img src="https://pngimg.com/uploads/github/github_PNG58.png" height=30rem></img>
         <a href=https://github.com/mpi-astronomy/arxiv_display style="color:black;">github/mpi-astronomy/arxiv_display</a>
@@ -37,6 +37,9 @@
     <div class="grid-item"> <div id="slide1" class="md_view">Content 1</div> </div>
     <div class="grid-item"> <div id="slide2" class="md_view">Content 2</div> </div>
     <div class="grid-item"> <div id="slide3" class="md_view">Content 3</div> </div>
+    <div class="grid-item"> <div id="slide4" class="md_view">Content 4</div> </div>
+    <div class="grid-item"> <div id="slide5" class="md_view">Content 5</div> </div>
+    <div class="grid-item"> <div id="slide6" class="md_view">Content 6</div> </div>
   </div>
 
 <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
@@ -65,8 +68,8 @@ $grid.packery('bindUIDraggableEvents', $items);
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- MD content -->
 <script>
-    const docs = ["2303.06650.md", "2303.05635.md", "2303.04727.md"];
-    const slides = ["slide1", "slide2", "slide3"];
+    const docs = ["2303.06650.md", "2303.05635.md", "2303.04727.md", "2303.02816.md", "2303.03420.md", "2303.01528.md"];
+    const slides = ["slide1", "slide2", "slide3", "slide4", "slide5", "slide6"];
 
     async function run() {
         for (let i = 0; i < docs.length; i++) {
