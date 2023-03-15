@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel='stylesheet' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- highlight.js CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/default.min.css">
+<!-- flickity local CSS -->
+<link rel="stylesheet" href="flickity.css">
+<link rel="stylesheet" href="packery.css">
+<!-- markdown local CSS -->
+<link rel="stylesheet" href="markdown.css">
+
+<link rel="icon" type="image/x-icon"
+    href="https://www.mpia.de/assets/touch-icon-32x32-a66937bcebc4e8894ebff1f41a366c7c7220fd97a38869ee0f2db65a9f59b6c1.png">
+<title>MPIA Arxiv on deck!</title>
+
+</head>
+
+<body translate="no" >
+    <div id="header"> <img src="header_banner.png" width="100%"></div>
+    <div id="suptitle"> {%-- suptitle:s --%} </div>
+    <div id="info">
+        <img src="https://pngimg.com/uploads/github/github_PNG58.png" height=30rem></img>
+        <a href=https://github.com/mpi-astronomy/arxiv_display style="color:black;">github/mpi-astronomy/arxiv_display</a>
+    </div>
+
+<!-- Packery grid HTML init -->
+{%-- grid-content:s --%}
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script src='https://unpkg.com/packery@2/dist/packery.pkgd.js'></script>
+<script id="rendered-js" >
+// external js: packery.pkgd.js, jquery-ui-draggable.js
+
+// initialize Packery
+var $grid = $('.grid').packery({
+  itemSelector: '.grid-item',
+  gutter: 2,
+  percentPosition: true,
+  // columnWidth helps with drop positioning
+  columnWidth: 100 });
+
+
+// make all items draggable
+var $items = $grid.find('.grid-item').draggable();
+// bind drag events to Packery
+$grid.packery('bindUIDraggableEvents', $items);
+//# sourceURL=pen.js
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+<!-- marked.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- MD content -->
+<script>
+    const docs = [{%-- docs:s --%}];
+    const slides = [{%-- slides:s --%}];
+
+    async function run() {
+        for (let i = 0; i < docs.length; i++) {
+            let file = await fetch(docs[i]);
+            let text = await file.text()
+            document.getElementById(slides[i]).innerHTML =
+                marked.parse(text);
+        }
+        hljs.highlightAll();
+    }
+    run()
+</script>
+<!-- Mathjax 3 -->
+<script type="text/javascript" id="MathJax-config" src="mathjax_config.js"> </script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<!-- Mathjax 3 async promise refresh for dynamic text -->
+<script>
+    const asyncTypeset = document.querySelector('#asyncTypeset')
+    setTimeout(async function () {
+        await MathJax.typesetPromise().catch((err) => console.log('Typeset failed: ' + err.message));
+        console.log('refreshed MathJax typeset');
+    }, 3000)
+</script>
+
+
+
+</body>
+
+</html>
