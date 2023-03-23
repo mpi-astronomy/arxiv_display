@@ -36,12 +36,15 @@
 
 #div_fig1 {
     width: 33%;
+    overflow: auto;
 }
 #div_fig2{
     width: 33%;
+    overflow: auto;
 }
 #div_fig3 {
     width: 33%;
+    overflow: auto;
 }
 
 #authors {
@@ -57,6 +60,7 @@ mark {background-color:#fff3b6;}
 #abstract {
     width: 100%;
     padding-top: 1rem;
+    overflow: auto;
 }
 
 #info {
