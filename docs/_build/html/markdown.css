@@ -83,4 +83,10 @@ mark {background-color:#fff3b6;}
     font-family: system-ui;
 }
 
+#qrcode {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
 .img img {object-fit:contain; max-height:150px; display:inline-block; text-align: center;}
