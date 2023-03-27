@@ -50,7 +50,7 @@ jobs:
       working-directory: ./docs
       run: |
         echo "### new logs :🪵" >> $GITHUB_STEP_SUMMARY  
-        cat "$(git ls-files ./docs/_build/html/logs -mo)" >> $GITHUB_STEP_SUMMARY
+        cat "$(git ls-files ./_build/html/logs -mo)" >> $GITHUB_STEP_SUMMARY
         echo "### new outputs! :rocket:" >> $GITHUB_STEP_SUMMARY
         echo "$(git ls-files -mo "*md")" >> $GITHUB_STEP_SUMMARY
         echo "### new files! :rocket:" >> $GITHUB_STEP_SUMMARY
