@@ -24,10 +24,7 @@
     background-color: #eee;
     line-height: 1.3rem;
 }
-#content h1 {
-    width: 100%;
-    font-size: 1.5rem;
-}
+
 .macros {
     visibility: hidden;
     position: absolute;
@@ -52,7 +49,7 @@
 }
 
 #comments {
-    width: 100%;
+    width: 90%;
 }
 
 mark {background-color:#fff3b6;}
@@ -88,5 +85,11 @@ mark {background-color:#fff3b6;}
     top: 1%;
     right: 1%;
 }
+
+div#qrcode .img, img {
+    object-fit: fill;
+}
+
+.h1, h1 {width: 88%; font-size: 2rem;}
 
 .img img {object-fit:contain; max-height:150px; display:inline-block; text-align: center;}
