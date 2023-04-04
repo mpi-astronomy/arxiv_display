@@ -1,5 +1,7 @@
 # MPIA Arxiv Display
 
+[![GitHub last commit](https://img.shields.io/github/last-commit/mpi-astronomy/arxiv_display?label=last%20logs)](https://nbviewer.org/github/mpi-astronomy/arxiv_display/blob/main/docs/log.ipynb)
+
 This project is a hack born during a science coffee at MPIA between [Iskren Georgiev (@iskreng-y-g)](https://github.com/iskren-y-g) and [Morgan Fouesneau (@mfouesneau)](https://github.com/mfouesneau). This repository generates the screen content for the corridors of the institute. It is a sort of Arxiver for institutes or groups.
 
 This repository "only" hosts a website that supports the institute's displays.
