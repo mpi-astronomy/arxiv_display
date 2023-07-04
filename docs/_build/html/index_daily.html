@@ -36,7 +36,6 @@
     <!-- Flickity HTML init -->
       <div class="carousel" 
        data-flickity='{ "autoPlay": 10000, "adaptiveHeight": true, "resize": true, "wrapAround": true, "pauseAutoPlayOnHover": true, "groupCells": 1 }' id="asyncTypeset">
-    <div class="carousel-cell"> <div id="slide1" class="md_view">Content 1</div> </div>
   </div>
 
 </body>
@@ -48,8 +47,8 @@
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- MD content -->
 <script>
-    const docs = ["2306.15037.md"];
-    const slides = ["slide1"];
+    const docs = [];
+    const slides = [];
 
     async function run() {
         for (let i = 0; i < docs.length; i++) {
