@@ -37,10 +37,6 @@
       <div class="carousel" 
        data-flickity='{ "autoPlay": 10000, "adaptiveHeight": true, "resize": true, "wrapAround": true, "pauseAutoPlayOnHover": true, "groupCells": 1 }' id="asyncTypeset">
     <div class="carousel-cell"> <div id="slide1" class="md_view">Content 1</div> </div>
-    <div class="carousel-cell"> <div id="slide2" class="md_view">Content 2</div> </div>
-    <div class="carousel-cell"> <div id="slide3" class="md_view">Content 3</div> </div>
-    <div class="carousel-cell"> <div id="slide4" class="md_view">Content 4</div> </div>
-    <div class="carousel-cell"> <div id="slide5" class="md_view">Content 5</div> </div>
   </div>
 
 </body>
@@ -52,8 +48,8 @@
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <!-- MD content -->
 <script>
-    const docs = ["2404.14127.md", "2404.12585.md", "2404.12432.md", "2404.13031.md", "2404.12443.md"];
-    const slides = ["slide1", "slide2", "slide3", "slide4", "slide5"];
+    const docs = ["2404.14127.md"];
+    const slides = ["slide1"];
 
     async function run() {
         for (let i = 0; i < docs.length; i++) {
