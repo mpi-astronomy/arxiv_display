@@ -35,6 +35,7 @@ jobs:
 
     - name: Install docs dependencies
       run: |
+        sudo apt-get update
         sudo apt-get install -y poppler-utils
         pip install --upgrade pip
         pip install --upgrade pip ipython ipykernel
