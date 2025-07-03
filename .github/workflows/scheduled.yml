@@ -47,6 +47,13 @@ jobs:
       run: |
         make html
 
+    - name: Cleanup old summaries (>3 months)
+      run: |
+        python cleanup_old_summaries.py --force --days 90
+        echo "Cleanup completed. Remaining files:" >> $GITHUB_STEP_SUMMARY
+        echo "$(find docs/_build/html -name '*.md' | wc -l) markdown files" >> $GITHUB_STEP_SUMMARY
+        echo "$(du -sh docs/_build/html | cut -f1) total size" >> $GITHUB_STEP_SUMMARY
+
     - name: create change summary
       working-directory: ./docs
       run: |
