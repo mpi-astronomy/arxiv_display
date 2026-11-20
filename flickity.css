@@ -1,0 +1,34 @@
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 85%;
+  height: 1200px;
+  margin-right: 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: none;
+  text-align: left;
+  content: counter(gallery-cell);
+  line-height: 50px;
+  font-size: 40px;
+  color: white;
+}
+
+.carousel-cell.is-selected {
+  filter: drop-shadow(0 10px 10px #000a);
+}
+
+.flickity-button {
+  background: #3333;
+}
